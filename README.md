@@ -1,0 +1,2 @@
+# auto-learning
+Esercizi random 
