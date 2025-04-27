@@ -1,0 +1,48 @@
+/* Base CSS Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  height: 100vh;
+  border: #333 solid 2px;
+  border-radius: 7px;
+  padding: 0;
+  margin: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#text-change {
+  font-size: 4em;
+}
+
+#btn {
+  padding: 10px;
+  background-color: aqua;
+  cursor: pointer;
+}
+
+#btn:hover {
+  background-color: red;
+}
+
+#btn:active {
+  background-color: orange;
+}
