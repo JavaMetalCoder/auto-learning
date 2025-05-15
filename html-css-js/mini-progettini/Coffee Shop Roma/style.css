@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-color: orange;
+  --secondary-color: brown;
+}
+
 body {
   font-size: 24px;
-  background-color: brown;
+  background-color: var(--secondary-color);
 }
 
 nav {
@@ -17,8 +22,9 @@ nav {
   gap: 10px;
   justify-content: space-between;
   align-items: center;
-  background-color: orange;
+  background-color: var(--main-color);
   border-radius: 5px;
+  box-shadow: 4px 4px 4px;
 
   
 }
@@ -46,3 +52,44 @@ nav li {
 nav li:hover {
   transform: translateY(-8px);
 }
+
+/* MAIN */
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  border: 3px solid var(--main-color);
+  border-radius: 6px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 4px 4px 4px;
+  transition: transform 0.3s ease;
+  background-color: white;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.container > p {
+  font-size: 3rem;
+  line-height: 2em;
+  text-shadow: 3px 3px;
+  text-align: center;
+  text-decoration: ; 
+}
+
+#coffee-hero {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  #coffee-hero:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
