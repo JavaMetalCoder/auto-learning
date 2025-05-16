@@ -77,7 +77,7 @@ nav li:hover {
   line-height: 2em;
   text-shadow: 3px 3px;
   text-align: center;
-  text-decoration: ; 
+  
 }
 
 #coffee-hero {
@@ -93,3 +93,38 @@ nav li:hover {
     transform: scale(1.05);
     filter: brightness(1.1);
   }
+
+/*GALLERY*/
+
+.gallery-locale h2 {
+  margin: 30px 0 20px 20px;
+  text-align: center;
+  box-sizing: content-box;
+  border: solid 2px var(--main-color);
+  min-width: fit-content;
+}
+
+.container-gallery-locale {
+  margin: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px;
+  scroll-behavior: smooth;
+  border: 2px solid var(--main-color);
+  background-color: aliceblue;
+
+}
+
+.gallery img {
+  display: inline-block;
+  width: 300px;
+  height: 400px;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease ;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}

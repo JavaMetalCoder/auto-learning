@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Coffee Shop Roma</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -14,22 +15,35 @@
           <li><a href="#">Prodotti</a></li>
           <li><a href="#">Contattaci</a></li>
         </ul>
-        <h1>Coffee Shop Roma</h1>
+        <h1>Caffè Roma</h1>
       </nav>
     </header>
     <main>
       <div class="conteiner-global">
         
-        <section class="hero-section">
-          <div class="container">
-            <img id="coffee-hero" src="coffee.png" alt="coffee">
+        <section  class="hero-section">
+          <div data-aos="fade-up" class="container">
+            <img id="coffee-hero" src="media/caffe-hero.png" alt="coffee">
             <p>Nuovo Coffee Shop a Roma, zona Aurelio. <br>Disponibili prenotazioni e consegne a domicilio</p>
 
           </div>
           
         </section>
       
-        <section class="gallery">
+        <section class="gallery-locale">
+          <h2>Galleria - Locale</h2>
+          <div class="container-gallery-locale">
+            <div class="gallery">
+              <img src="media/caffe.roma.esterno.png" alt="locale esterno">
+              <img src="media/caffe.roma.esterno2.png" alt="locale esterno2">
+              <img src="media/caffe.interno.png" alt="">
+              <img src="media/caffe.interno2.png" alt="">
+
+            </div>
+            
+            
+          </div>
+
         <!--Qui metterò le foto del      locale fittizio-->
 
         </section>
@@ -45,6 +59,7 @@
       
     
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
    <script src="script.js"></script>
   </body>
 </html>
