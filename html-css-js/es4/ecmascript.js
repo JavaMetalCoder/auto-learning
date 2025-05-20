@@ -43,6 +43,7 @@ function contaVocali(string) {
     }
 
   }
+  //ritorna il num di vocali
   return i;
 
 }
