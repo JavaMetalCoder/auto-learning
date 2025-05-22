@@ -53,46 +53,34 @@ console.log(contaVocali("Perdincibacco"));
 /* es3 */
 
 class Persona {
-  let _age;
-  let _name;
-  let isWorking;
-
   constructor(age, name, isWorking) {
     this.age = age;
     this.name = name;
     this.isWorking = isWorking;
   }
 
-  function getAge() {
+  getAge() {
     return this.age;
   }
- 
-  function setAge(newAge) {
+
+  setAge(newAge) {
     this.age = newAge;
   }
 
-  function getName() {
+  getName() {
     return this.name;
   }
- 
-  function setAge(newName) {
+
+  setName(newName) {
     this.name = newName;
   }
 
-  function getIsWorking() {
+  getIsWorking() {
     return this.isWorking;
   }
- 
-  function setIsWorking() {
-    if(this.isWorking === true) {
-       this.isWorking = false;
-    } else {
-       this.isWorking = true;
-    }
+
+  toggleIsWorking() {
+    this.isWorking = !this.isWorking;
   }
-
-
-
-
 }
 
