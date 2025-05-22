@@ -50,3 +50,49 @@ function contaVocali(string) {
 
 console.log(contaVocali("Perdincibacco"));
 
+/* es3 */
+
+class Persona {
+  let _age;
+  let _name;
+  let isWorking;
+
+  constructor(age, name, isWorking) {
+    this.age = age;
+    this.name = name;
+    this.isWorking = isWorking;
+  }
+
+  function getAge() {
+    return this.age;
+  }
+ 
+  function setAge(newAge) {
+    this.age = newAge;
+  }
+
+  function getName() {
+    return this.name;
+  }
+ 
+  function setAge(newName) {
+    this.name = newName;
+  }
+
+  function getIsWorking() {
+    return this.isWorking;
+  }
+ 
+  function setIsWorking() {
+    if(this.isWorking === true) {
+       this.isWorking = false;
+    } else {
+       this.isWorking = true;
+    }
+  }
+
+
+
+
+}
+
