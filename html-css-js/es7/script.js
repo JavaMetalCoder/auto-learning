@@ -47,3 +47,21 @@ function printObject(obj) {
     }
   }
 }
+
+
+const machine = {
+  motore : true,
+  ruote : 4
+}
+
+const robot1 = Object.create(machine);
+robot1.nome = "RX-78";
+robot1.intelligenza = "alta";
+
+for (const key in robot1) {
+  if (robot1.hasOwnProperty(key)) {
+    console.log(`${key}: ${robot1[key]}`);
+    
+    
+  }
+}
