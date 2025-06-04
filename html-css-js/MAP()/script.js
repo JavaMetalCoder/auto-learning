@@ -51,9 +51,9 @@ const animali = ["gatto", "cane", "criceto"];
 
 // Output: ["#1: gatto", "#2: cane", "#3: criceto"]
 
-const d = animali.map( animale => {
-  return `#${++index}: ${animale}`;
-}, index = 0);
+const d = animali.map( (animale, index) => {
+  return `#${index + 1}: ${animale}`;
+});
 
 console.log(d);
 
@@ -64,20 +64,23 @@ const voti = [18, 25, 30, 10, 16];
 // Output: ["Sufficiente", "Buono", "Ottimo", "Bocciato", "Bocciato"]
 
 const e = voti.map(voto => {
-  if(!typeof (voto) === "number") {
+  if(typeof voto !== "number") {
     return;
   } 
 
-  if (voto >= 18 && voto < 24) {
-    return "Sufficiente";
-  } else if (voto >= 24 && voto < 30) {
-    return "Buono";
-  } else if (voto == 30) {
-    return "Ottimo";
-  } else if (voto < 18) {
-    return "Bocciato";
-  }
+  switch (true) {
+    case voto < 18:
+      return "Bocciato";
+      
+    case voto < 24:
+      return "Sufficiente";
+      
+    case voto < 30:
+      return "Buono";
     
+    case voto === 30:
+      return "Ottimo";
+  }
 
 });
 
