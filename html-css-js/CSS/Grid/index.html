@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Grid Challenge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* 🔥 QUI USEREMO CSS GRID - per ora è vuoto */
+        .layout-container {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "header header" "sidebar main" "footer footer";
+        }
+
+        .header {
+          grid-area: header;
+        }
+        .sidebar {
+          grid-area: sidebar;
+        }
+        .main-content {
+          grid-area: main;
+        }
+        .footer {
+          grid-area: footer;
+        }
+
+        /* Styling delle sezioni */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-right: 2px solid #e9ecef;
+        }
+
+        .main-content {
+            background: white;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Elementi interni */
+        .nav-item {
+            padding: 0.5rem;
+            margin: 0.25rem 0;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .nav-item:hover {
+            background: #e9ecef;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #495057;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 📱 Media Query per responsive */
+        @media (max-width: 768px) {
+            /* Qui modificheremo il grid per mobile */
+        }
+    </style>
+</head>
+<body>
+    <div class="layout-container">
+        
+        <header class="header">
+            <h1>🌟 MetalCoder App</h1>
+            <nav>
+                <span style="margin: 0 1rem;">Home</span>
+                <span style="margin: 0 1rem;">About</span>
+                <span style="margin: 0 1rem;">Contact</span>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <h3>📂 Navigation</h3>
+            <div class="nav-item">📊 Dashboard</div>
+            <div class="nav-item">👤 Profile</div>
+            <div class="nav-item">⚙️ Settings</div>
+            <div class="nav-item">📈 Analytics</div>
+            <div class="nav-item">🚀 Projects</div>
+        </aside>
+
+        <main class="main-content">
+            <h2>🎯 Main Content Area</h2>
+            <p>Questo è il contenuto principale della pagina. Con CSS Grid possiamo controllare perfettamente questo layout!</p>
+            
+            <div class="card">
+                <h3>Card 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Card 2</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Card 3</h3>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 MetalCoder Project - Powered by CSS Grid 🔥</p>
+        </footer>
+
+    </div>
+
+    <div style="position: fixed; top: 10px; right: 10px; background: rgba(0,0,0,0.8); color: white; padding: 10px; border-radius: 5px; font-size: 12px;">
+        <strong>📝 PROBLEMA:</strong><br>
+        Ora è tutto in colonna!<br>
+        Dobbiamo usare CSS Grid per:<br>
+        • Header in alto<br>
+        • Sidebar + Main affiancati<br>
+        • Footer in basso<br>
+        • Responsive
+    </div>
+</body>
+</html>
